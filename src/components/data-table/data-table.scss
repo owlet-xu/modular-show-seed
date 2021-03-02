@@ -1,0 +1,47 @@
+.data-table {
+  margin: 20px;
+  padding: 15px;
+  position: relative;
+  @include setColorByKeysWithArgs('border','1px solid', 'main-border');
+  @include setColorByKeys('background-color', 'color-white');
+  .table-title {
+    @include leftMenu();
+    font-size: 20px;
+    color: #1f282f;
+    position: absolute;
+    top: 18px;
+    left: 16px;
+  }
+  .tools-container {
+    height: 56px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .btn-sms {
+      width: 146px;
+      color: white;
+      @include setColorByKeys('background-color', 'main-color');
+    }
+    .btn-group {
+      width: 223px;
+      margin-left: 20px;
+      margin-right: 16px;
+    }
+  }
+  .table-container {
+    height: calc(100% - 56px - 50px);
+  }
+  .footer-container {
+    height: 50px;
+  }
+}
+
+
+
+.el-pagination {
+  float: right;
+  white-space: nowrap;
+  padding: 10px 5px;
+  color: #171c31;
+  font-family: $YaHeiBlodFont;
+}

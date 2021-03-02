@@ -1,0 +1,27 @@
+.search-form {
+  display: flex;
+  height: 76px;
+  width: 100%;
+  @include setColorByKeys('background-color', 'color-white');
+  .left-inputs {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .right-buttons {
+    flex: 0 0 350px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .btn-sms {
+      width: 140px;
+      @include setColorByKeys('background-color', 'main-color');
+      color: white;
+    }
+    .btn-group {
+      width: 132px;
+      margin-left: 20px;
+      margin-right: 37px;
+    }
+  }
+}

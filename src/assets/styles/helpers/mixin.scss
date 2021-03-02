@@ -1,0 +1,55 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    @include setColorByKeys('background', 'main-color');
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin leftMenu {
+  font-family: Myriad Pro Semibol, Myriad Pro Semibold-Semibold;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333333;
+}
+
+@mixin leftMenuSub {
+  font-family: Myriad Pro Regular, Myriad Pro Regular-Regular;
+  font-weight: 400;
+  font-size: 18px;
+  color: #333333;
+}
+
+@mixin tableHead {
+  font-family: Myriad Pro Bold, Myriad Pro Bold-Bold;
+  font-weight: 700;
+  font-size: 18px;
+  color: #303030 !important;
+}
+
+@mixin searchTitle {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'ProximaNovaRegular';
+  color: #303030;
+}

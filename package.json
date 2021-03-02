@@ -1,0 +1,93 @@
+{
+  "name": "@xgychina/modular-show-seed",
+  "version": "0.1.0-RC",
+  "private": false,
+  "scripts": {
+    "serve": "gulp merge-i18n && gulp buildSkin && vue-cli-service serve ",
+    "build": "gulp merge-i18n && gulp buildSkin && vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run build",
+      "commit-msg": "validate-commit-msg"
+    }
+  },
+  "dependencies": {
+    "@types/js-cookie": "^2.2.0",
+    "@types/lodash": "^4.14.117",
+    "@types/standard-error": "^1.1.0",
+    "animate.css": "^3.5.1",
+    "axios": "^0.18.0",
+    "axios-observable": "^1.0.6",
+    "date-fns": "^1.30.1",
+    "element-ui": "^2.13.2",
+    "husky": "^1.3.1",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.15",
+    "rxjs": "^6.5.5",
+    "rxjs-compat": "^6.5.5",
+    "standard-error": "^1.1.0",
+    "ts-md5": "^1.2.7",
+    "vue": "^2.6.11",
+    "vue-class-component": "^6.3.2",
+    "vue-i18n": "^8.18.2",
+    "vue-property-decorator": "^7.3.0",
+    "vue-router": "^3.3.4",
+    "vuex": "^3.4.0",
+    "vuex-class": "^0.3.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^5.2.7",
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-plugin-typescript": "^3.12.1",
+    "@vue/cli-plugin-unit-mocha": "^3.12.1",
+    "@vue/cli-service": "^3.12.1",
+    "@vue/test-utils": "^1.0.3",
+    "chai": "^4.2.0",
+    "element-theme": "^2.0.1",
+    "element-theme-chalk": "^2.4.9",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-json-editor": "^2.5.4",
+    "gulp-merge-json": "^1.3.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-shell": "^0.8.0",
+    "gulp-sonar": "^3.0.1",
+    "minimist": "^1.2.5",
+    "node-sass": "^4.9.4",
+    "postcss-pxtorem": "^5.1.1",
+    "sass-loader": "^7.3.1",
+    "typescript": "^3.9.5",
+    "validate-commit-msg": "^2.14.0",
+    "vue-template-compiler": "^2.6.11",
+    "vuex-module-decorators": "^0.17.0"
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "themes",
+        "i18n",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "build",
+        "ci",
+        "chore",
+        "revert"
+      ],
+      "warnOnFail": false,
+      "maxSubjectLength": 100,
+      "helpMessage": "does not match '<type>: <subject>' !"
+    }
+  }
+}

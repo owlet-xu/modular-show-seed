@@ -1,0 +1,142 @@
+{
+  "id": "1893113",
+  "name": "Test",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "15515387",
+      "name": "用户名",
+      "font_class": "username",
+      "unicode": "e6f7",
+      "unicode_decimal": 59127
+    },
+    {
+      "icon_id": "15515388",
+      "name": "密码",
+      "font_class": "password",
+      "unicode": "e6f8",
+      "unicode_decimal": 59128
+    },
+    {
+      "icon_id": "7864113",
+      "name": "菜单",
+      "font_class": "menu",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "13787560",
+      "name": "日历",
+      "font_class": "calendar",
+      "unicode": "e75c",
+      "unicode_decimal": 59228
+    },
+    {
+      "icon_id": "4158101",
+      "name": "邮件",
+      "font_class": "email",
+      "unicode": "e68e",
+      "unicode_decimal": 59022
+    },
+    {
+      "icon_id": "5303145",
+      "name": "知识库",
+      "font_class": "knowledge",
+      "unicode": "e6b8",
+      "unicode_decimal": 59064
+    },
+    {
+      "icon_id": "7046486",
+      "name": "关机",
+      "font_class": "power-off",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "7081075",
+      "name": "工单",
+      "font_class": "work-order",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "10110287",
+      "name": "查询",
+      "font_class": "search",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "12081050",
+      "name": "发送",
+      "font_class": "send",
+      "unicode": "f5c7",
+      "unicode_decimal": 62919
+    },
+    {
+      "icon_id": "13692133",
+      "name": "删 除",
+      "font_class": "delete",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "14136620",
+      "name": "重置",
+      "font_class": "reset",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "14260939",
+      "name": "客户信息",
+      "font_class": "user-info",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "14360067",
+      "name": "群发",
+      "font_class": "mass",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
+      "icon_id": "14491002",
+      "name": "设置",
+      "font_class": "setting",
+      "unicode": "e681",
+      "unicode_decimal": 59009
+    },
+    {
+      "icon_id": "14735345",
+      "name": "失败",
+      "font_class": "defeated",
+      "unicode": "e687",
+      "unicode_decimal": 59015
+    },
+    {
+      "icon_id": "14735347",
+      "name": "成功",
+      "font_class": "succeed",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    },
+    {
+      "icon_id": "14776398",
+      "name": "短信",
+      "font_class": "message",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    },
+    {
+      "icon_id": "14778612",
+      "name": "会话设置",
+      "font_class": "conversation",
+      "unicode": "e691",
+      "unicode_decimal": 59025
+    }
+  ]
+}

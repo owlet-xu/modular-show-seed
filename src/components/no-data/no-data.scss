@@ -1,0 +1,16 @@
+.no-data {
+  width: 200px;
+  height:200px;
+  margin: 0 auto;
+  margin-top: 260px;
+  img {
+    width: 200px;
+    height:200px;
+  }
+  span {
+    display: block;
+    text-align: center;
+    @include leftMenuSub();
+    color: rgb(200,200,200);
+  }
+}

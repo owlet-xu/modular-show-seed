@@ -1,0 +1,36 @@
+// 主要参数
+$YaHeiBlodFont: Microsoft YaHei Bold, Microsoft YaHei Bold-Blod;
+
+// 不同主题的样式文件
+$themes: (
+  white: (
+    main-color: #13488e,
+    menus-bg: #e2e5f0,
+    menu-active-bg: #13488e,
+    main-container-bg: #f5f5f5,
+    main-border: rgb(235, 238, 245),
+    login-bgc:#2d3a4b,
+    head-btn-bg: #2f5bac,
+    head-line: #2953a0,
+    color-white: #fff,
+    color-black: #000,
+    table-row-1: #f5f5f5,
+    table-row-2: #fafafa,
+    table-head-bg: #f6f6f6
+  ),
+  black: (
+    main-color: black,
+    menus-bg: black,
+    menu-active-bg: gray,
+    main-container-bg: black,
+    main-border: rgb(235, 238, 245),
+    login-bgc:black,
+    head-btn-bg: black,
+    head-line: black,
+    color-white: black,
+    color-black: #000,
+    table-row-1: black,
+    table-row-2: black,
+    table-head-bg: black
+  )
+)

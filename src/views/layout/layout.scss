@@ -1,0 +1,29 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  .head {
+    width: 100%;
+    height: 70px;
+  }
+  .main-container {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 70px);
+    .left-menus {
+      flex: 0 0 250px;
+      @include setColorByKeys('background-color', 'menus-bg');
+    }
+    .left-menus-small {
+      width: auto;
+    }
+    .right-content {
+      flex: 1 1 auto;
+      width: 100%;
+      overflow: hidden;
+      @include setColorByKeys('background-color', 'main-container-bg');
+    }
+  }
+}

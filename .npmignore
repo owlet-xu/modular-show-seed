@@ -1,0 +1,9 @@
+node_modules
+src
+doc
+public
+tests
+/themes
+.*
+tslint.json
+tsconfig.json

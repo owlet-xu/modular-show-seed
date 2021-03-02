@@ -1,0 +1,41 @@
+@import './variables.scss';
+
+// 主题切换
+@mixin themeify {
+  @each $theme-name, $theme-map in $themes {
+    $theme-map: $theme-map !global;
+    [data-theme='#{$theme-name}'] & {
+      @content;
+    }
+  }
+}
+
+// 获取map的值
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+// 动态设置颜色class
+// $keys: color,background
+// $color main_color
+// 返回 color: red,background red
+@mixin setColorByKeys($keys, $color) {
+  @include themeify {
+    @each $key in $keys {
+      #{$key}: themed($color) !important;
+    }
+  }
+}
+
+// 动态设置颜色class
+// $keys: border
+// $args: 1px solid
+// $color main_color
+// 返回 border: 1px solid red;
+@mixin setColorByKeysWithArgs($keys, $args, $color) {
+  @include themeify {
+    @each $key in $keys {
+      #{$key}: #{$args} themed($color) !important;
+    }
+  }
+}

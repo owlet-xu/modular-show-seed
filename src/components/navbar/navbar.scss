@@ -1,0 +1,23 @@
+.navbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  @include setColorByKeys('background-color', 'main-color');
+  .logo-bg {
+    flex: 0 0 900px;
+  }
+  .logo-bg-small {
+    // flex: 0 0 64px;
+  }
+  .empty {
+    flex: 1;
+  }
+  .login-info {
+    flex: 0 0 239px;
+    margin-left: 12px;
+  }
+  .login-out {
+    margin-left: 22px;
+    flex: 0 0 72px;
+  }
+}

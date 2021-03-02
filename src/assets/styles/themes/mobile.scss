@@ -1,0 +1,50 @@
+// 手机样式适配,在resize-mixin.ts中动态适配
+.mobile-themes {
+  .layout .main-container .left-menus {
+    width: auto !important;
+    flex: 1 !important;
+  }
+  .sidebar {
+    width: auto !important;
+  }
+  .logo {
+    .title {
+      display: none;
+    }
+    .border-1 {
+      display: none;
+    }
+    .border-2 {
+      display: none;
+    }
+  }
+  .navbar {
+    .logo-bg {
+      flex: 0 0 150px;
+    }
+  }
+  .sidebar .menus-container {
+    .el-submenu__title i {
+      margin-left: 25px;
+      margin-right: 10px;
+    }
+    .el-menu-item i {
+      margin-left: 25px;
+    }
+  }
+  .el-menu--vertical .el-menu-item {
+    padding-left: 10px !important;
+  }
+  .el-button {
+    width: 60px !important;
+    & > span {
+      i {
+        margin-right: 0px;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+
+}

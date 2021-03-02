@@ -1,0 +1,104 @@
+// el-table公共样式
+.el-table {
+  &::before {
+    height: 0px;
+  }
+  @include searchTitle();
+  thead {
+    @include tableHead();
+  }
+  td {
+    padding: 7px 0 !important;
+  }
+  .cell {
+    line-height: 26px !important;
+  }
+  .el-table__body-wrapper {
+    @include scrollBar();
+    .el-table__body {
+      .table-row-dark {
+        @include setColorByKeys('background-color', 'table-row-1');
+      }
+      .table-row-light {
+        @include setColorByKeys('background-color', 'table-row-2');
+      }
+    }
+  }
+  th {
+    $keys: 'border-top', 'border-left';
+    @include setColorByKeysWithArgs($keys, '1px solid', 'main-border');
+    @include setColorByKeys('background-color', 'table-head-bg');
+  }
+  .el-table__header-wrapper {
+    .el-table__header {
+      /deep/ .gutter {
+        border-top: none !important;
+        @include setColorByKeys('background-color', 'color-white');
+      }
+    }
+  }
+}
+// el-menu
+.el-menu {
+  .el-submenu.is-active .el-submenu__title {
+    border-bottom-color: #c4cae1;
+  }
+  .el-submenu .el-menu-item {
+    @include setColorByKeys('background-color', 'menus-bg');
+  }
+  .el-submenu__title i {
+    margin-right: 10px;
+    margin-left: 12px;
+  }
+  .el-menu-item i {
+    margin-right: 10px;
+    margin-left: 12px;
+  }
+  .el-submenu__title,
+  .el-menu-item {
+    padding: 0px !important;
+    border-bottom: 1px solid #c4cae1;
+    height: 68px;
+    line-height: 22px;
+    font-size: 16px;
+
+    display: flex;
+    white-space: normal;
+    align-items: center;
+    &.is-active {
+      @include setColorByKeys('background-color', 'menu-active-bg');
+      i,
+      span {
+        color: #fff !important;
+      }
+    }
+    /deep/ .el-submenu__icon-arrow {
+      display: none;
+    }
+  }
+}
+// el-pager
+.el-pager li.active {
+  @include setColorByKeys('color', 'main-color');
+}
+
+.el-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 36px;
+  & > span {
+    display: inline-block;
+    width: 100%;
+    i {
+      margin-right: 10px;
+    }
+  }
+}
+// el-datepiker
+.el-date-editor {
+  input {
+    @include setColorByKeys('background-color', 'color-white');
+  }
+}

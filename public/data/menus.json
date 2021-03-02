@@ -1,0 +1,60 @@
+[
+  {
+    "id": "1",
+    "name": "Ficha de Trabalho",
+    "icon": "icon-worklist",
+    "RouterName": "NoData" 
+  },
+  {
+    "id": "2",
+    "name": "Gestão de dados  do cliente",
+    "icon": "icon-usergroup",
+    "RouterName": "NoData" 
+  },
+  {
+    "id": "3",
+    "name": "Gestão da base de  conhecimento",
+    "icon": "icon-repository",
+    "RouterName": "NoData" 
+  },
+  {
+    "id": "4",
+    "name": "Caixa postal",
+    "icon": "icon-email",
+    "RouterName": "NoData" 
+  },
+  {
+    "id": "5",
+    "name": "Gestão de mensagens",
+    "icon": "icon-message",
+    "subMenus": [
+      {
+        "id": "5-1",
+        "name": "Envio de SMS",
+        "RouterName": "NoData" 
+      },
+      {
+        "id": "5-2",
+        "name": "Consulta do SMS",
+        "RouterName": "Messages" 
+      },
+      {
+        "id": "5-3",
+        "name": "Configuração do SMS",
+        "RouterName": "NoData" 
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Dados do operador",
+    "icon": "icon-setting",
+    "RouterName": "NoData" 
+  },
+  {
+    "id": "7",
+    "name": "Informação auypmática ao cliente",
+    "icon": "icon-user-info",
+    "RouterName": "NoData" 
+  }
+]

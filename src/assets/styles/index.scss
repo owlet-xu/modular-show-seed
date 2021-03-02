@@ -1,0 +1,12 @@
+
+// 样式初始化
+@import './base/reset.scss';
+// 不同主题样式
+@import './themes/handle.scss';
+// 封装样式
+@import './helpers/mixin.scss';
+// 响应式
+@import './themes/mobile.scss';
+// 特殊样式修改
+@import './special/element-ui.scss';
+
