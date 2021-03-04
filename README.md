@@ -11,6 +11,9 @@
   - [4.1. 响应式布局最佳实践](#41-响应式布局最佳实践)
   - [4.2. 主题切换最佳实践](#42-主题切换最佳实践)
   - [4.3. 动画库animate.css应用](#43-动画库animate.css应用)
+- [5. 发布网站](#5-发布网站)
+  - [5.1. 打包大小分析](#51-打包大小分析)
+  - [5.2. 切换打包环境](#52-切换打包环境)
 
 
 
@@ -450,3 +453,60 @@ const initElement = () => {
   }
 
 ```
+
+# 5. 发布网站
+
+## 5.1. 打包大小分析
+
+不需要安装插件，不需要配置 package.json 文件，不需要安装webpack-bundle-analyzer、 ~~！！去看 vue-cli 的官方文档
+
+运行下npm run build --report  浏览器访问 http://127.0.0.1:8888 或者在dist打开report.html静态文件
+
+## 5.1. 切换打包环境
++ 模式的概念 
+
+  Vue CLI 项目中一个重要的概念。默认情况下，一个 Vue CLI 项目有三个模式：
+
+  1、vue-cli-service serve 对应 **development模式**
+
+  2、vue-cli-service build 和 vue-cli-service test:e2e 对应**production模式**
+
+  3、vue-cli-service test:unit 对应 **test模式**
+
++ process.env
+
+  process.env 是 Node.js 中的一个环境对象。其中保存着系统的环境的变量信息。可使用 Node.js 命令行工具直接进行查看。
+
+  根目录新建两个文件.env.development  .env.production，在里面可以配置参数
+
+  在代码中可以读取到参数，例如：
+  ```
+  process.env.NODE_ENV
+  
+  ```
+  参考资料：
+
+  https://juejin.cn/post/6844904069136416781 
+
+  https://cli.vuejs.org/zh/guide/mode-and-env.html#%E6%A8%A1%E5%BC%8F
+
+  https://www.jianshu.com/p/d4ffb5d2e2be
+
+  ## 5.3. 优化包大小
+
+  1、npm run build --report 看分析报告哪个模块比较大
+
+  2、shift + f5 强制刷新界面，在Network下可以看到加载的资源大小，此时可截图记住文件大小
+
+  3、编写按需加载代码，shift + f5，分析界面
+
+  ```typescript
+  // 全部引入，有51k大小
+  import _ from 'lodash';
+  // 按需引入
+  import merge from 'lodash/merge';
+  ```
+
+  4、npm run build --report 看效果
+
+  

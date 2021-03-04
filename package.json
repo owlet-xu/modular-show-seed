@@ -3,8 +3,8 @@
   "version": "0.1.0-RC",
   "private": false,
   "scripts": {
-    "serve": "gulp merge-i18n && gulp buildSkin && vue-cli-service serve ",
-    "build": "gulp merge-i18n && gulp buildSkin && vue-cli-service build",
+    "start": "gulp merge-i18n && gulp buildSkin && vue-cli-service serve",
+    "build": "gulp merge-i18n && gulp buildSkin && vue-cli-service build --report",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
