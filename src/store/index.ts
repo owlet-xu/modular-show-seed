@@ -8,7 +8,6 @@ Vue.use(Vuex);
 export interface IRootState {
   app: IAppState;
 }
-
 const isDev = process.env.NODE_ENV === 'development';
 const store = new Vuex.Store<IRootState>({
   plugins: isDev ? [createLogger({})] : []

@@ -3,7 +3,7 @@ import Vue from 'vue';
 import VueI18n,  { LocaleMessages } from 'vue-i18n';
 import * as httpClient from '@/utils/http-client';
 import ElementLocale from 'element-ui/lib/locale';
-import { merge } from 'lodash';
+import merge from 'lodash/merge';
 import { AppModule } from '@/store/modules/app';
 
 import zh from './zh-CN.json';
