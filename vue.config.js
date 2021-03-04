@@ -16,7 +16,7 @@ module.exports = {
   configureWebpack: config => {
     config.target = 'web';
     if (process.env.NODE_ENV === 'production') {
-      // chunkVendorSplit.split(config);
+      chunkVendorSplit.split(config);
     }
   }
 };

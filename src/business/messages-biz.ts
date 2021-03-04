@@ -1,7 +1,7 @@
 // models
 import { SmsInfo } from '@/models/sms-info';
 import { PageInfo } from '@/models/page-info';
-import { format } from 'date-fns';
+import format from 'date-fns/format';
 // import Messages from '@/components/messages/messages';
 
 export default {

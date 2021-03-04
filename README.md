@@ -505,6 +505,11 @@ const initElement = () => {
   import _ from 'lodash';
   // 按需引入
   import merge from 'lodash/merge';
+  
+  // 全部引入，有21k大小
+  import { format } from 'date-fns';
+  // 按需引入
+  import format from 'date-fns/format';
   ```
 
   4、npm run build --report 看效果
