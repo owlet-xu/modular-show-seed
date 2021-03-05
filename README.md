@@ -14,6 +14,7 @@
 - [5. 发布网站](#5-发布网站)
   - [5.1. 打包大小分析](#51-打包大小分析)
   - [5.2. 切换打包环境](#52-切换打包环境)
+  - [5.3. 优化包大小](#53-优化包大小)
 
 
 
@@ -462,7 +463,7 @@ const initElement = () => {
 
 运行下npm run build --report  浏览器访问 http://127.0.0.1:8888 或者在dist打开report.html静态文件
 
-## 5.1. 切换打包环境
+## 5.2. 切换打包环境
 + 模式的概念 
 
   Vue CLI 项目中一个重要的概念。默认情况下，一个 Vue CLI 项目有三个模式：
@@ -492,95 +493,29 @@ const initElement = () => {
 
   https://www.jianshu.com/p/d4ffb5d2e2be
 
-  ## 5.3. 优化包大小
-
-  1、npm run build --report 看分析报告哪个模块比较大
-
-  2、shift + f5 强制刷新界面，在Network下可以看到加载的资源大小，此时可截图记住文件大小
-
-  3、编写按需加载代码，shift + f5，分析界面
-
-  ```typescript
-  // 全部引入，有51k大小
-  import _ from 'lodash';
-  // 按需引入
-  import merge from 'lodash/merge';
-  
-  // 全部引入，有21k大小
-  import { format } from 'date-fns';
-  // 按需引入
-  import format from 'date-fns/format';
-  ```
-
   
 
-  [elemenUI按需加载](./doc/07-elemenUI按需加载.md)
+## 5.3. 优化包大小
 
-  
+1、npm run build --report 看分析报告哪个模块比较大
 
-  4、npm run build --report 看效果
+2、shift + f5 强制刷新界面，在Network下可以看到加载的资源大小，此时可截图记住文件大小
 
-  
+3、编写按需加载代码，shift + f5，分析界面，[elemenUI按需加载](./doc/07-elemenUI按需加载.md)
 
-  ## 5.3.1 cli3开启gzip压缩
+```typescript
+// 全部引入，有51k大小
+import _ from 'lodash';
+// 按需引入
+import merge from 'lodash/merge';
 
-  1、安装工具，注意最新版本可能会报错
+// 全部引入，有21k大小
+import { format } from 'date-fns';
+// 按需引入
+import format from 'date-fns/format';
+```
 
-  ```typescript
-  npm i compression-webpack-plugin@5.0.1
-  ```
+4、[cli3开启gzip压缩.md](./doc/08-cli3开启gzip压缩.md)
 
-  
+5、npm run build --report 看效果，shift + f5，分析界面
 
-  2、vue.config.js中配置
-
-  ```typescript
-  const CompressionPlugin = require("compression-webpack-plugin");
-  
-  module.exports = {
-    publicPath: './',
-    productionSourceMap: false, // false 打包的时候没有map文件
-    devServer: {
-      port: 8080
-    },
-    css: {
-      loaderOptions: {
-        sass: {
-          data: `@import "@/assets/styles/index.scss";`
-        }
-      }
-    },
-    configureWebpack: config => {
-      config.target = 'web';
-      if (process.env.NODE_ENV === 'production') {
-        return {
-          plugins: [
-            new CompressionPlugin({
-              test: /\.js$|\.html$|\.css$|\.jpg$|\.jpeg$|\.png/, // 需要压缩的文件类型
-              threshold: 10240, // 归档需要进行压缩的文件大小最小值，我这个是10K以上的进行压缩
-              deleteOriginalAssets: false // 是否删除原文件
-            })
-          ]
-        }
-      }
-    }
-  };
-  
-  ```
-
-  
-
-  3、nginx中配置gzip
-
-  ```
-          listen       9001;
-          server_name  localhost;
-          charset utf-8;
-          location / {
-              root   D:/nginx-1.15.8/html/;
-              index  index.html index.htm test.html;
-  			gzip_static on; #静态压缩
-          }    
-  ```
-
-  

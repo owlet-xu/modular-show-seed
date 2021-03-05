@@ -1,6 +1,6 @@
 {
   "name": "@xgychina/modular-show-seed",
-  "version": "0.1.0-RC",
+  "version": "1.0.0",
   "private": false,
   "scripts": {
     "start": "gulp merge-i18n && gulp buildSkin && vue-cli-service serve",
