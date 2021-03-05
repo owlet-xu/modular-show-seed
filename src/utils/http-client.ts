@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { AxiosRequestConfig } from 'axios';
 import StandardError from 'standard-error';
-import { Message as ElMessage } from 'element-ui';
+// import { Message as ElMessage } from 'element-ui';
 import i18n from '@/lang';
 import { ErrorShow } from './http-error';
 
@@ -18,7 +18,7 @@ const getPromise = (url: string, header?: AxiosRequestConfig): Promise<any> => {
         ErrorShow(errorCode, message);
         return Promise.reject(new StandardError(message, error.response.data));
       } else {
-        ElMessage.error(i18n.t('Error.Net').toString());
+        // ElMessage.error(i18n.t('Error.Net').toString());
         return Promise.reject(new StandardError('SystemError', error));
       }
     });
@@ -36,7 +36,7 @@ const putPromise = (url: string, data?: any): Promise<any> => {
         ErrorShow(errorCode, message);
         return Promise.reject(new StandardError(message, error.response.data));
       } else {
-        ElMessage.error(i18n.t('Error.Net').toString());
+        // ElMessage.error(i18n.t('Error.Net').toString());
         return Promise.reject(new StandardError('SystemError', error));
       }
     });
@@ -54,7 +54,7 @@ const postPromise = (url: string, data?: any, config?: AxiosRequestConfig): Prom
         ErrorShow(errorCode, message);
         return Promise.reject(new StandardError(message, error.response.data));
       } else {
-        ElMessage.error(i18n.t('Error.Net').toString());
+        // ElMessage.error(i18n.t('Error.Net').toString());
         return Promise.reject(new StandardError('SystemError', error));
       }
     });
@@ -72,7 +72,7 @@ const deletePromise = (url: string, config?: AxiosRequestConfig): Promise<any> =
         ErrorShow(errorCode, message);
         return Promise.reject(new StandardError(message, error.response.data));
       } else {
-        ElMessage.error(i18n.t('Error.Net').toString());
+        // ElMessage.error(i18n.t('Error.Net').toString());
         return Promise.reject(new StandardError('SystemError', error));
       }
     });

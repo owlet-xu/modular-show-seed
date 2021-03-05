@@ -4,7 +4,7 @@ import router from './router';
 import store from '@/store';
 import i18n from '@/lang';
 import config from './utils/appconfig';
-import { initLog, initTheme, initElement } from '@/utils/app-init';
+import { initLog, initTheme, initElement } from '@/common/init/app-init';
 
 config().then(() => {
   initTheme();
