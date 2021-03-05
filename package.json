@@ -50,6 +50,7 @@
     "@vue/test-utils": "^1.0.3",
     "babel-plugin-component": "^1.1.1",
     "chai": "^4.2.0",
+    "compression-webpack-plugin": "^5.0.1",
     "element-theme": "^2.0.1",
     "element-theme-chalk": "^2.4.9",
     "gulp": "^3.9.1",
